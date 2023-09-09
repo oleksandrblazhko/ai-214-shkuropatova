@@ -1,2 +1,2 @@
 ### Деталізація матеріальних потреб
-![MindMap]([URL-шлях-до-файлу-зображення](https://github.com/oleksandrblazhko/ai-214-shkuropatova/blob/ai-214-shkuropatova_with_laboratory_work_1/1-SoftwareRequirements/1.1-DeterminingConsumerNeeds/1.1.2-MaterialNeedsDetails/MindMapExample.jpg)https://github.com/oleksandrblazhko/ai-214-shkuropatova/blob/ai-214-shkuropatova_with_laboratory_work_1/1-SoftwareRequirements/1.1-DeterminingConsumerNeeds/1.1.2-MaterialNeedsDetails/MindMapExample.jpg)
+![MindMap](https://github.com/oleksandrblazhko/ai-214-shkuropatova/blob/ai-214-shkuropatova_with_laboratory_work_1/1-SoftwareRequirements/1.1-DeterminingConsumerNeeds/1.1.2-MaterialNeedsDetails/MindMapExample.jpg)
