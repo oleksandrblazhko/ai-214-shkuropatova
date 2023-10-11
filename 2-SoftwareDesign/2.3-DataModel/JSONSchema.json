@@ -1,0 +1,58 @@
+{
+  "description": "Опис об'єктів предметної області відстежування емоцій та вологісті навколишнього середовища ",
+  "type": "object",
+  "properties": {
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "login": { "type": "string" },
+        "password": { "type": "string" },
+        "date_birth": { "type": "string", "format": "date" }
+      },
+      "required": ["name", "login", "password", "date_birth"]
+    },
+    "EmotionRecording": {
+      "type": "object",
+      "properties": {
+        "recorded_emotion": { "type": "string", "maxLength": 60 },
+        "comment": { "type": "string", "maxLength": 300 }
+      },
+      "required": ["recorded_emotion"]
+    },
+    "Emotion": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "EmotionStatistic": {
+      "type": "object",
+      "properties": {
+        "number_repetitions": { "type": "integer" },
+        "percentage_ratio": { "type": "number" }
+      },
+      "required": ["number_repetitions", "percentage_ratio"]
+    },
+    "Weather": {
+      "type": "object",
+      "properties": {
+        "temperature": { "type": "number" },
+        "weather_description": { "type": "string" }
+      },
+      "required": ["temperature", "weather_description"]
+    },
+    "HumidityEnvironment": {
+      "type": "object",
+      "properties": {
+        "water_vapor_elasticity": { "type": "number" },
+        "relative_humidity": { "type": "number" },
+        "moisture_deficit": { "type": "number" },
+        "dewpoint": { "type": "number" },
+        "temperature_felt": { "type": "number" }
+      },
+      "required": ["water_vapor_elasticity", "relative_humidity", "moisture_deficit", "dewpoint", "temperature_felt"]
+    }
+  }
+}
