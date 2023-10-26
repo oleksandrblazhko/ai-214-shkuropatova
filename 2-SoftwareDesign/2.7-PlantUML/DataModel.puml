@@ -1,0 +1,36 @@
+@startjson
+
+title Опис схеми даних
+
+{
+  "Consumer": {
+    "name": "John Doe",
+    "login": "johndoe123",
+    "password": "secure_password",
+    "date_birth": "1990-01-15"
+  },
+  "EmotionRecording": {
+    "recorded_emotion": "Happiness",
+    "comment": "I had a great day today."
+  },
+  "Emotion": {
+    "name": "Happiness"
+  },
+  "EmotionStatistic": {
+    "number_repetitions": 5,
+    "percentage_ratio": 25.5
+  },
+  "Weather": {
+    "temperature": 20.5,
+    "weather_description": "Partly cloudy"
+  },
+  "HumidityEnvironment": {
+    "water_vapor_elasticity": 10.2,
+    "relative_humidity": 70.5,
+    "moisture_deficit": 2.3,
+    "dewpoint": 15.8,
+    "temperature_felt": 21.0
+  }
+}
+
+@endjson

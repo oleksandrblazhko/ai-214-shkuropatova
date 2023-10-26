@@ -1,0 +1,24 @@
+@startuml
+
+hide circle
+title UML-діаграма концептуальних класів
+
+class User {
+  name: string
+  login: string
+  password: string
+  date_birth: date
+}
+
+class Consumer {
+}
+
+class EmotionRecording {
+  recorder_emotion: string
+  comment: string
+}
+
+User "1" <|-- "+" Consumer
+Consumer "1" --> "+" EmotionRecording : "can record"
+
+@enduml
