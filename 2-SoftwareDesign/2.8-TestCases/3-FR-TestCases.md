@@ -1,4 +1,51 @@
 | FR id | TC id | Опис кроків тестового сценарію  | Опис очікуваних результатів |
-|  ---- |  ----  |  -----  |  -----  |
-|   |    |    |    |
-|   |    |    |    |
+|  ---- |  ----  |  ---------------  |  :------------------:  |
+|  FR1.1 |  TC1.1  |    |   Результат = Строка  |
+|   |    |  temperature = 20  |    |
+|   |    |  water_vapor_elasticity = 7  |    |
+|   |    |  relative_humidity = 20  |    |
+|   |    |  moisture_deficit = 0  |    |
+|   |    |  dewpoint = -10  |    |
+|   |    |  temperature_felt = 5  |    |
+| FR1.1  |  TC1.2  |    |  Результат = 0  |
+|   |    | temperature = 52   |    |
+|   |    | water_vapor_elasticity = 7   |    |
+|   |    | relative_humidity = 20   |    |
+|   |    | moisture_deficit = 0   |    |
+|   |    | dewpoint = -10   |    |
+|   |    | temperature_felt = 5   |    |
+| FR1.1  |  TC1.3  |    | Результат = 0    |
+|   |    |  temperature = 20  |    |
+|   |    |  water_vapor_elasticity = 0  |    |
+|   |    |  relative_humidity = 20  |    |
+|   |    |  moisture_deficit = 0  |    |
+|   |    |  dewpoint = -10  |    |
+|   |    |  temperature_felt = 5  |    |
+| FR1.1  |  TC1.4  |    |   Результат = 0  |
+|   |    |  temperature = 20  |    |
+|   |    |  water_vapor_elasticity = 7  |    |
+|   |    |  relative_humidity = -20  |    |
+|   |    |  moisture_deficit = 0  |    |
+|   |    |  dewpoint = -10  |    |
+|   |    |  temperature_felt = 5  |    |
+| FR1.1  |  TC1.5  |    |   Результат = 0  |
+|   |    |  temperature = 20  |    |
+|   |    |  water_vapor_elasticity = 7  |    |
+|   |    |  relative_humidity = 20  |    |
+|   |    |  moisture_deficit = -5  |    |
+|   |    |  dewpoint = -10  |    |
+|   |    |  temperature_felt = 5  |    |
+| FR1.1  |  TC1.6  |    |   Результат = 0  |
+|   |    |  temperature = 20  |    |
+|   |    |  water_vapor_elasticity = 7  |    |
+|   |    |  relative_humidity = 20  |    |
+|   |    |  moisture_deficit = 0  |    |
+|   |    |  dewpoint = 111111  |    |
+|   |    |  temperature_felt = 5  |    |
+| FR1.1  |  TC1.7  |    |   Результат = 0  |
+|   |    |  temperature = 20  |    |
+|   |    |  water_vapor_elasticity = 7  |    |
+|   |    |  relative_humidity = 20  |    |
+|   |    |  moisture_deficit = 0 |    |
+|   |    |  dewpoint = -10  |    |
+|   |    |  temperature_felt = 111111  |    |
