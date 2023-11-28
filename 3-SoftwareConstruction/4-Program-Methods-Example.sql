@@ -9,6 +9,27 @@ CREATE OR REPLACE TYPE T_HumidityEnvironment AS OBJECT (
 );
 
 CREATE OR REPLACE FUNCTION observeHumidity(humidityData IN OBJ_HumidityEnvironment) RETURN VARCHAR2 IS
+   result VARCHAR2(100) := 'Допустимі параметри';
+BEGIN
+   -- Перевірка вхідних параметрів
+   IF humidityData.temperature < -50.0 OR humidityData.temperature > 50.0 OR
+      humidityData.water_vapor_elasticity <= 0 OR
+      humidityData.relative_humidity < 0 OR humidityData.relative_humidity > 100 OR
+      humidityData.moisture_deficit < 0 OR
+      humidityData.dewpoint < -50.0 OR humidityData.dewpoint > 50.0 OR
+      humidityData.temperature_felt < -50.0 OR humidityData.temperature_felt > 50.0 THEN
+      result := 'Значення параметрів виходять за допустимі межі';
+   END IF;
+
+   RETURN result;
+
+EXCEPTION
+   WHEN OTHERS THEN
+      result := 'Помилка: ' || SQLERRM;
+      RETURN result;
+END;
+
+CREATE OR REPLACE FUNCTION observeHumidity(humidityData IN OBJ_HumidityEnvironment) RETURN VARCHAR2 IS
    result VARCHAR2(100);
 BEGIN
    -- Перевірка вхідних параметрів
