@@ -1,0 +1,16 @@
+name: SQL Code Linter
+on:
+  push:
+    branches-ignore: [master]
+jobs:
+  SqlCodeLinter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Lint SQL Code
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_SQL: true
+          FILTER_REGEX_INCLUDE: ./*.sql
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
