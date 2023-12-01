@@ -1,0 +1,29 @@
+name: Test Cases
+
+on:
+  push:
+    branches: main
+
+jobs:
+  TestCases:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Download Oracle JDBC Driver
+      run: |
+        mkdir -p lib
+
+    - name: Compile and Execute
+      run: |
+        cd $GITHUB_WORKSPACE/
+        javac -cp .:ojdbc8.jar TestCases.java
+        java -cp .:ojdbc8.jar TestCases ${{ secrets.LOGIN }} ${{ secrets.PASSWORD }}
