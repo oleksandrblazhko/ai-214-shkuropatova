@@ -21,10 +21,9 @@ jobs:
     - name: Download Oracle JDBC Driver
       run: |
         mkdir -p lib
-        curl -L -o lib/ojdbc8.jar https://www.example.com/path/to/ojdbc8.jar
 
     - name: Compile and Execute
       run: |
         cd $GITHUB_WORKSPACE/
-        javac -cp .:lib/ojdbc8.jar TestCases.java
-        java -cp .:lib/ojdbc8.jar TestCases ${{ secrets.LOGIN }} ${{ secrets.PASSWORD }}
+        javac -cp .:ojdbc8.jar TestCases.java
+        java -cp .:ojdbc8.jar TestCases ${{ secrets.LOGIN }} ${{ secrets.PASSWORD }}
